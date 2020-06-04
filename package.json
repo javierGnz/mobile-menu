@@ -1,0 +1,17 @@
+{
+  "name": "mobile-menu",
+  "version": "1.0.0",
+  "description": "Hamburger menu with sub-levels",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "author": "Javier Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.7"
+  }
+}
