@@ -1,0 +1,21 @@
+:root {
+  --clr-hightlight: #ffc914;
+  --clr-dark: #2e282a;
+  --clr-light: #fefefe;
+
+  // #17BEBB
+  // #E4572E
+
+  --shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+html, body {
+  min-height: 100vh;
+}

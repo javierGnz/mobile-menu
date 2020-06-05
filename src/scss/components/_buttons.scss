@@ -1,0 +1,23 @@
+.btn {
+  display: inline-flex;
+  border: 1px solid transparent;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-toggle-menu {
+  position: fixed;
+  right: 3.5vh;
+  bottom: 3.5vh;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--clr-hightlight);
+  box-shadow: var(--shadow);
+}

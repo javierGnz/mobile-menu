@@ -1,9 +1,13 @@
-$color-primary: #ccc;
+// Packages
+@import "~minireset.css/minireset.sass";
 
-.header {
-  background-color: $color-primary;
+@import "abstracts/variables";
 
-  h1 {
-    font-size: 24px;
-  }
-}
+@import "base/base";
+
+@import "layout/wrapper";
+@import "layout/menu";
+@import "layout/content";
+@import "layout/container";
+
+@import "components/buttons";
