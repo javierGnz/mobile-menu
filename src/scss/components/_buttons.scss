@@ -20,4 +20,9 @@
   border-radius: 50%;
   background-color: var(--clr-hightlight);
   box-shadow: var(--shadow);
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 }
