@@ -2,6 +2,7 @@
   --clr-hightlight: #ffc914;
   --clr-dark: #2e282a;
   --clr-light: #fefefe;
+  --clr-bg: #E8EBF3;
 
   // #17BEBB
   // #E4572E
@@ -18,4 +19,9 @@ html {
 
 html, body {
   min-height: 100vh;
+}
+
+body {
+  background-color: var(--clr-light);
+  font-family: 'Roboto', sans-serif;
 }

@@ -1,13 +1,16 @@
 import { gsap } from "gsap";
 
-const menu = document.querySelector(".menu");
-let toggle = gsap.to(".btn-toggle-menu", {rotation: 90, x: -200, duration: 0.4, paused: true});
+const tl = gsap.timeline({ ease: "power2.out", duration: 1.2 });
 
-toggle.reverse();
+tl.to(".menu", { opacity: 1, delay: -0.4, visibility: "visible" })
+  .to(".btn-toggle-menu", { rotate: 180 })
+  .to(".menu__bg", { scale: 50 })
+  .to(".menu__list", { opacity: 1 });
+
+tl.reverse();
 
 const handleToggleMenu = () => {
-  menu.classList.toggle("menu--open");
-  toggle.reversed(!toggle.reversed());
+  tl.reversed(!tl.reversed());
 };
 
 export default handleToggleMenu;

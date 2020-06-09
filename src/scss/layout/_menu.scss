@@ -3,14 +3,40 @@
   top: 0;
   left: 0;
   z-index: 10;
+  visibility: hidden;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
-  background-color: var(--clr-light);
   opacity: 0;
-  visibility: hidden;
 
-  &--open {
-    opacity: 1;
-    visibility: visible;
+  &__bg {
+    position: absolute;
+    right: 3.5vh;
+    bottom: 3.5vh;
+    z-index: -1;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--clr-light);
+    font-size: 4rem;
+    transform: scale(0);
+    transform-origin: center center;
+  }
+
+  &__list {
+    display: grid;
+    height: 100%;
+    opacity: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+  }
+
+  &__subitem {
+    display: none;
   }
 }
