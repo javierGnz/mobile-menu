@@ -1,8 +1,9 @@
 import { gsap } from "gsap";
+// import { subItems, subItemsActive } from './utils';
 
-const tl = gsap.timeline({ ease: "power2.out", duration: 1.2 });
+const tl = gsap.timeline({ ease: "power2.out", duration: 0.65 });
 
-tl.to(".menu", { opacity: 1, delay: -0.4, visibility: "visible" })
+tl.to(".menu", { opacity: 1, duration: 0, visibility: "visible" })
   .to(".btn-toggle-menu", { rotate: 180 })
   .to(".menu__bg", { scale: 50 })
   .to(".menu__list", { opacity: 1 });
