@@ -1,20 +1,21 @@
-import { subItems } from './utils';
+import { subItems, subItemsBack } from './utils';
 
-const btnBack = document.querySelector('.menu__subitem-back')
-
-const handleToggleSubMenu = (btnSubMenus) => {  
+const handleToggleSubMenu = (btnSubMenus) => {
   btnSubMenus.map((btnSubMenu, index) => {
-    btnSubMenu.addEventListener('click', function() { 
+    btnSubMenu.addEventListener('click', () => {
       subItems[index].classList.toggle('menu__subitem--active');
      });
-
   })
 }
 
-btnBack.addEventListener('click', function() {
-  Array.from(subItems).map((item, index) => {
-    item.classList.remove('menu__subitem--active')
+const handleSubMenuBack = () => {
+  Array.from(subItemsBack).map((btnBack, index) => {
+    btnBack.addEventListener('click', () => {
+      subItems[index].classList.remove('menu__subitem--active');
+    })
   })
-})
+}
+
+handleSubMenuBack();
 
 export default handleToggleSubMenu;
