@@ -1,6 +1,7 @@
 :root {
   --clr-hightlight: #ffc914;
   --clr-dark: #2e282a;
+  --clr-dark-light: #575757;
   --clr-light: #fefefe;
   --clr-bg: #f7f9f9;
   --clr-grey: #f3f3f6;
@@ -10,6 +11,9 @@
   // #E4572E
 
   --shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
+
+  --ff-heading: 'Karla', sans-serif;
+  --ff-body: 'Rubik', sans-serif;
 }
 
 html {
@@ -25,5 +29,6 @@ html, body {
 
 body {
   background-color: var(--clr-light);
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--ff-body);
+  color: var(--dark);
 }

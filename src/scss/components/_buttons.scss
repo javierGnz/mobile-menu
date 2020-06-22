@@ -2,9 +2,36 @@
   display: inline-flex;
   border: 1px solid transparent;
   background-color: transparent;
+  cursor: pointer;
 
   &:focus {
     outline: none;
+  }
+
+  &--plus {
+    width: 35px;
+    height: 35px;
+    background-color: rgba($clr-hightlight, 0.25);
+    color: var(--clr-hightlight);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    .im {
+      line-height: 1;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &:hover {
+      box-shadow: var(--shadow);
+
+      .im {
+        backface-visibility: hidden;
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 
@@ -15,6 +42,8 @@
   z-index: 9999;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -22,9 +51,11 @@
   box-shadow: var(--shadow);
   cursor: pointer;
 
-  svg {
+  span {
+    display: block;
     width: 24px;
-    height: 24px;
+    height: 2px;
+    background-color: var(--clr-dark);
   }
 
   @include breakpoint-up(sm) {
