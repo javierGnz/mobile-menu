@@ -1,8 +1,22 @@
 .navbar {
   display: flex;
-  justify-content: flex-end;
-  padding: 1.25rem 2rem;
-  border-bottom: 1px solid var(--clr-grey);
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--clr-grey-light);
+
+  @include breakpoint-up(sm) {
+    justify-content: flex-end;
+    padding: 1.25rem 2rem;
+  }
+
+  &__logo {
+    max-width: 150px;
+
+    @include breakpoint-up(sm) {
+      display: none;
+    }
+  }
 
   &__profile {
     position: relative;
@@ -10,14 +24,15 @@
   }
 
   &__img {
+    overflow: hidden;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
     }
   }

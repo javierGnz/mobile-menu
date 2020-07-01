@@ -1,17 +1,10 @@
 :root {
   --clr-hightlight: #ffc914;
   --clr-black: #2e282a;
-  --clr-black-light: #575757;
-  --clr-light: #fefefe;
-  --clr-bg: #f7f9f9;
-  --clr-grey: #f3f3f6;
-  --clr-grey-dark: #d2d3da;
-
+  --clr-grey: #adadad;
+  --clr-grey-light: #f7f7f7;
   --clr-dark: #131923;
   --clr-dark-light: #162132;
-
-  // #17BEBB
-  // #E4572E
 
   --shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
   --shadow-light: 0 0 2rem -6px rgba(230, 234, 245, 0.89);
@@ -32,7 +25,7 @@ html, body {
 }
 
 body {
-  background-color: var(--clr-light);
+  // background-color: var(--clr-light);
   font-family: var(--ff-body);
   color: var(--dark);
 }

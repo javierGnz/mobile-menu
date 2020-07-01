@@ -1,17 +1,26 @@
 .card {
   display: flex;
-  padding: 1.5rem;
-  border-radius: 8px;
-  background-color: var(--clr-light);
-  box-shadow: var(--shadow);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: var(--shadow-light);
+
+  @include breakpoint-up(sm) {
+    padding: 1.5rem;
+  }
 
   &__img {
     overflow: hidden;
     flex-shrink: 0;
-    margin-right: 2rem;
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
+    margin-right: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+
+    @include breakpoint-up(sm) {
+      margin-right: 2rem;
+      width: 150px;
+      height: 150px;
+    }
 
     img {
       width: 100%;
@@ -22,12 +31,11 @@
   }
 
   &__info {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 
     .btn--plus {
-      margin-top: auto;
       align-self: flex-end;
     }
   }
@@ -36,41 +44,43 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    font-family: var(--ff-heading);
     margin-bottom: 1rem;
+    font-family: var(--ff-heading);
 
     h4 {
-      font-size: 1.45rem;
-      font-weight: 600;
-      line-height: 1.34;
+      font-size: 1.175rem;
+
+      @include breakpoint-up(sm) {
+        font-size: 1.45rem;
+        line-height: 1.34;
+      }
 
       small {
-        color: var(--clr-dark-light);
         display: block;
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: 75%;
+        margin-top: 0.25rem;
+        color: var(--clr-grey);
       }
     }
   }
 
   &__price {
-    font-family: var(--ff-heading);
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-left: 0.5rem;
-    line-height: 1.5;
     display: inline-flex;
+    margin-left: 1rem;
+    font-weight: 600;
+
+    @include breakpoint-up(sm) {
+      font-size: 1.25rem;
+    }
 
     &::before {
       content: '$';
-      margin-right: 0.25rem;
-      color: var(--clr-dark-light);
-      font-weight: 400;
     }
   }
 
   &__category {
     display: flex;
+    margin-bottom: 1rem;
 
     .icon:not(:last-child) {
       margin-right: 0.5rem;

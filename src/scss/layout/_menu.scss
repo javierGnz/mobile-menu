@@ -41,8 +41,10 @@
   &__logo {
     padding: 1rem;
     text-align: center;
+    opacity: 0;
 
     @include breakpoint-up(sm) {
+      opacity: 1;
       padding: 1rem 1.5rem 3rem;
     }
 
@@ -75,6 +77,8 @@
   }
 
   &__item {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
     @include breakpoint-up(sm) {
       &:not(:last-child) {
         margin-bottom: 0.5rem;
@@ -153,14 +157,15 @@
 
     @include breakpoint-up(sm) {
       position: relative;
-      padding: 0;
+      padding: 0 1.75rem;
       max-height: 0;
       background-color: transparent;
+      transform: translateX(0);
     }
 
     &--active {
       visibility: visible;
-      max-height: initial;
+      max-height: 100%;
       opacity: 1;
       transform: translateX(0);
 
@@ -173,8 +178,10 @@
   &__subitem-back {
     position: relative;
     margin-bottom: 1rem;
-    padding: 0 1rem;
+    padding: 1rem;
     text-align: center;
+    font-family: var(--ff-heading);
+    font-size: 1.25rem;
 
     @include breakpoint-up(sm) {
       display: none;
@@ -188,6 +195,7 @@
       content: '\e002';
       font-family: $ff-icon;
       transform: translateY(-50%);
+      font-size: 0.84rem;
     }
   }
 

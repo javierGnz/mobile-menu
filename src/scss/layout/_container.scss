@@ -1,25 +1,60 @@
 .container {
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr calc(100% / 3);
-  gap: 1rem;
+  padding: 1.25rem 1rem;
+
+  @include breakpoint-up(sm) {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr calc(100% / 3);
+    gap: 1rem;
+  }
 
   &__wrapper {
 
   }
 
   &__title {
-    font-family: var(--ff-heading);
     margin-bottom: 2rem;
+    font-family: var(--ff-heading);
 
     h1 {
-      font-size: 2.25rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.75rem;
+
+      @include breakpoint-up(sm) {
+        font-size: 2.25rem;
+      }
     }
 
     span {
       display: block;
-      color: var(--clr-dark-light);
+      color: var(--clr-grey);
+    }
+  }
+
+  &__details {
+    // display: none;
+    position: fixed;
+    width: 80vw;
+    top: 0;
+    right: 0;
+    background-color: $clr-white;
+    bottom: 0;
+    box-shadow: var(--shadow);
+    transform: translateX(10px);
+    opacity: 0;
+    z-index: 10;
+    visibility: hidden;
+    padding: 1rem;
+
+    @include breakpoint-up(sm) {
+      position: relative;
+      width: auto;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    #details-close {
+      position: absolute;
+      right: 1rem;
     }
   }
 }
