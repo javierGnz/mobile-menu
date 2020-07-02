@@ -31,7 +31,6 @@
   }
 
   &__details {
-    // display: none;
     position: fixed;
     width: 80vw;
     top: 0;
@@ -43,7 +42,7 @@
     opacity: 0;
     z-index: 10;
     visibility: hidden;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
 
     @include breakpoint-up(sm) {
       position: relative;
@@ -54,7 +53,13 @@
 
     #details-close {
       position: absolute;
-      right: 1rem;
+      right: 0.5rem;
+      top: 0.5rem;
+      color: var(--clr-black);
+
+      @include breakpoint-up(sm) {
+        display: none;
+      }
     }
   }
 }

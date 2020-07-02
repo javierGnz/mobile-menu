@@ -1,26 +1,38 @@
 .cart {
-  padding: 0 1rem;
+  position: relative;
+
+  @include breakpoint-up(sm) {
+    padding: 0 1rem;
+  }
 
   &__title {
     font-family: var(--ff-heading);
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
+
+    @include breakpoint-up(sm) {
+      margin-bottom: 2rem;
+    }
 
     h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      font-size: 1.45rem;
     }
 
     span {
       display: block;
-      color: var(--clr-dark-light);
+      color: var(--clr-grey);
     }
   }
 
   &__type {
     width: 100%;
     color: var(--clr-grey);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+
+    @include breakpoint-up(sm) {
+      margin-bottom: 0.75rem;
+    }
   }
 
   &__item {
@@ -34,10 +46,14 @@
   &__img {
     overflow: hidden;
     flex-shrink: 0;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     width: 50px;
     height: 50px;
-    border-radius: 8px;
+    border-radius: 6px;
+
+    @include breakpoint-up(sm) {
+      margin-right: 1rem;
+    }
 
     img {
       width: 100%;
@@ -52,27 +68,37 @@
     margin-right: 0.5rem;
     justify-content: space-between;
 
+    @include breakpoint-up(sm){
+      margin-right: 1rem;
+    }
+
     h4 {
-      font-size: 0.85rem;
+      font-size: 0.875rem;
+
+      @include breakpoint-up(sm) {
+        font-size: 1rem;
+      }
 
       small {
         color: var(--clr-grey);
         display: block;
+        font-size: 75%;
+        margin-top: 0.25rem;
       }
     }
   }
 
   &__price {
-    font-family: var(--ff-heading);
-    font-weight: 600;
-    margin-left: 0.5rem;
     display: inline-flex;
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+
+    @include breakpoint-up(sm) {
+      margin-left: 1rem;
+    }
 
     &::before {
       content: '$';
-      margin-right: 0.25rem;
-      color: var(--clr-dark-light);
-      font-weight: 400;
     }
   }
 }
